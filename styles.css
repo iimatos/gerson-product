@@ -827,7 +827,13 @@ p {
   }
 }
 
-@media only screen and (height: 907px) and (height: 568px) {
+@media only screen and (height: 568px) {
+  .promessa {
+    min-height: 110vh;
+  }
+}
+
+@media only screen and (height: 907px) {
   .promessa {
     min-height: 110vh;
   }
