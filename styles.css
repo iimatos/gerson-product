@@ -153,7 +153,6 @@ img {
 .video-css {
   width: 100%;
   max-width: 800px;
-  height: 500px;
   margin: 64px auto 0;
 }
 
@@ -163,6 +162,10 @@ img {
   font-weight: 700;
   display: block;
   width: 100%;
+}
+
+#vsltube {
+  max-width: 800px;
 }
 
 section,
@@ -781,8 +784,20 @@ p {
     font-size: 36px;
   }
 
+  .promessa .content {
+    margin-top: 64px;
+  }
+
   .content .faixa {
     white-space: nowrap;
+  }
+
+  .palmeira img {
+    max-width: 360px;
+  }
+
+  .frasco img {
+    max-width: 300px;
   }
 
   .frasco {
@@ -841,7 +856,7 @@ p {
   }
 
   .frasco img {
-    max-width: 220px;
+    max-width: 280px;
   }
 
   .palmeira img {
