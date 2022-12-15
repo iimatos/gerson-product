@@ -822,8 +822,12 @@ p {
 }
 
 @media only screen and (max-width: 375px) {
+  .video-css {
+    margin-top: 48px;
+  }
+
   .frasco img {
-    max-width: 220px;
+    max-width: 180px;
   }
 }
 
