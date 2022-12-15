@@ -1,0 +1,869 @@
+:root {
+  --white: #fff;
+  --red: #e74c3c;
+  --black: #000;
+  --img-color: #ededed;
+  --overlay: rgba(0, 0, 0, 0.75);
+}
+
+/********************/
+/* Component classes*/
+/********************/
+
+/*********/
+/* Geral */
+/*********/
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: 'Montserrat', Sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 17px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-quero button {
+  width: 100%;
+  font-family: 'Montserrat', Sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: transparent;
+  background-image: radial-gradient(at top center, #5efc68 15%, #05d80e 87%);
+  border-style: solid;
+  border-width: 0px 0px 4px 0px;
+  border-color: #008006;
+  border-radius: 8px 8px 8px 8px;
+  box-shadow: 0px 40px 27px -23px rgb(0 0 0 / 79%);
+  padding: 25px 25px 25px 25px;
+  color: white;
+}
+
+.primeira-dobra {
+  background-image: url('./img/bg.png');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 10px;
+}
+
+.header--texto {
+  padding: 10px;
+}
+
+.header--texto > h1 {
+  font-size: 30px;
+  line-height: 1.2em;
+  font-weight: 400;
+  color: #000000;
+}
+
+.header--texto > p {
+  font-size: 18px;
+  color: #000000;
+  margin-block: 25px;
+  padding-bottom: 20px;
+}
+
+.header--img {
+  padding: 10px;
+  width: 90%;
+}
+
+.promessa {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.promessa .background {
+  background: url(./bg.png) no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: 4;
+}
+
+.promessa .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  text-align: center;
+  margin-top: 164px;
+  padding: 0 20px;
+}
+
+.content .faixa {
+  position: relative;
+  color: white;
+  padding: 0 5px;
+  z-index: 1;
+}
+
+.content .faixa:after {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  background: #efb810;
+  z-index: -1;
+}
+
+.faixa-right:after {
+  left: 0;
+}
+
+.faixa-left:after {
+  right: 0;
+}
+
+.promessa .content h1 {
+  font-size: 64px;
+  text-transform: uppercase;
+}
+
+.promessa .content p {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 48px;
+}
+
+.promessa .content p span {
+  border-bottom: 2px solid red;
+}
+
+.frasco {
+  position: absolute;
+  right: -10%;
+  bottom: 0;
+}
+
+.palmeira img {
+  max-width: 500px;
+}
+
+.frasco img {
+  display: block;
+  max-width: 500px;
+}
+
+/* vsl */
+.video-css {
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  margin: 64px auto 0;
+}
+
+.video-css:before {
+  content: 'Assista o vídeo abaixo para ter acesso com exclusividade';
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+}
+
+section,
+footer {
+  padding: 50px 10px;
+  display: grid;
+  grid-auto-rows: auto;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.fundao {
+  background-image: url(./img/bg.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 400px 100px;
+  position: relative;
+}
+
+#vsl {
+  padding: 99%;
+  width: 90px;
+  border-left-color: #008006;
+  margin: 90px;
+}
+
+img.gersonfrasco {
+  position: absolute;
+  width: 40%;
+  right: 0%;
+  bottom: 0%;
+}
+
+img.gersonpalmeira {
+  position: absolute;
+  width: 40%;
+  left: 0%;
+  top: 0%;
+}
+
+.main--compostos {
+  background-image: linear-gradient(180deg, #ffffff 0%, #f7f7f7 100%);
+}
+
+.compostos-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
+}
+
+.compostos-item > h3 {
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0;
+}
+
+.compostos-item > p {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+.compostos-item > img {
+  width: 100px;
+}
+
+.main--carrossel {
+  background-color: rgb(255, 183, 43);
+  color: black;
+}
+
+.main--como-funciona {
+  background-color: #f7f7f7;
+  color: black;
+  border: 5px solid;
+  border-image: linear-gradient(90deg, #b5fe83, rgb(255, 230, 27), #b5fe83) 1;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 0px;
+}
+
+.main--fabricacao {
+  background-image: linear-gradient(180deg, #f7f7f7 1%, rgb(255, 230, 27) 45%);
+  color: black;
+  border: 5px solid;
+  border-image: linear-gradient(90deg, #b5fe83, rgb(255, 230, 27), #b5fe83) 1;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+}
+
+.main--fabricacao .video {
+  width: 100%;
+  aspect-ratio: 1.77/1;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  margin-top: 20px;
+}
+
+.main--produtos {
+  background-image: linear-gradient(180deg, rgb(255, 183, 43) 0%, #ffd532 100%);
+  color: black;
+  gap: 30px;
+}
+
+.card > img {
+  width: 90%;
+}
+
+.main--primeira-compra > h2 {
+  margin: 0;
+}
+
+.main--primeira-compra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f7f7;
+  color: black;
+  gap: 10px;
+}
+
+.passo-a-passo {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  gap: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.6);
+}
+
+.passo-a-passo ol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+.card-beneficios {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  width: 80%;
+}
+
+.card-beneficios > img {
+  width: 50%;
+  margin-inline: auto;
+}
+
+.card-beneficios > p {
+  font-size: 21px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+footer {
+  background-color: rgb(255, 183, 43);
+  color: black;
+}
+
+footer > div > * {
+  width: 100%;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer--links > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.footer--links > ul > li > a {
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.btn-rastrear > button {
+  font-size: 12px;
+  font-weight: 600;
+  fill: #000000;
+  color: #000000;
+  background-color: transparent;
+  background-image: linear-gradient(270deg, #8fff00 0%, #03ff00 100%);
+  border: none;
+  border-radius: 0px 0px 0px 0px;
+  display: inline-block;
+  line-height: 1;
+  padding: 10px;
+  text-align: center;
+  width: 60%;
+}
+
+.footer--avisos > p {
+  color: black;
+  font-size: 12px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.footer--site-seguro > .botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer--site-seguro > .botoes > button {
+  width: 50%;
+  margin-inline: auto;
+  font-family: 'Montserrat', Sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  fill: #5a5a5a;
+  color: #5a5a5a;
+  padding: 10px;
+}
+
+.footer--copy {
+  color: black;
+  font-family: 'Montserrat', Sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.beneficios-container {
+  display: grid;
+  grid-auto-rows: auto;
+  row-gap: 60px;
+  margin-top: 60px;
+}
+
+.card-beneficios-conteudo {
+  width: 90%;
+  margin: auto;
+  position: relative;
+  padding: 40px 20px 20px;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.imagem-beneficio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 /1;
+  width: 70px;
+  background-color: rgb(255, 230, 27);
+  position: absolute;
+  transform: translateX(-50%);
+  top: -40%;
+  left: 50%;
+  border: 6px solid white;
+  border-radius: 6px;
+}
+
+.imagem-beneficio > img {
+  width: 60%;
+  max-width: 80px;
+}
+
+.ultima {
+  background: rgb(255, 230, 27);
+  color: black;
+}
+
+#btn-card-1,
+#btn-card-2,
+#btn-card-3,
+#btn-card-4 {
+  background-color: #00e300;
+  color: white;
+  font-weight: 600;
+}
+
+/*Carrossel*/
+
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.slides-container {
+  width: 80%;
+  aspect-ratio: 1/1;
+  display: flex;
+  gap: 30px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  list-style: none;
+  margin: 0;
+  margin-inline: auto;
+  padding: 0;
+  border-radius: 10px;
+  border: 3px solid rgb(245, 206, 66);
+}
+
+.slide-arrow {
+  position: absolute;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 4rem;
+  background-color: white;
+  border: none;
+  width: 2rem;
+  font-size: 3rem;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 100ms;
+}
+
+.slide-arrow:hover,
+.slide-arrow:focus {
+  opacity: 1;
+}
+
+#slide-arrow-prev {
+  left: 0;
+  padding-left: 0.25rem;
+  border-radius: 0 2rem 2rem 0;
+}
+
+#slide-arrow-next {
+  right: 0;
+  padding-left: 0.75rem;
+  border-radius: 2rem 0 0 2rem;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  flex: 1 0 100%;
+}
+
+.slide > img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+/*Fim Carrossel*/
+
+/*Cards*/
+
+section.principal {
+  padding: 0 0 30px 0;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 3px;
+  background-color: rgb(111, 14, 230);
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-size: 0.7em;
+  color: white;
+}
+
+.product-card-oferta * {
+  text-align: center;
+}
+
+.top-venda {
+  box-shadow: 0 8px 60px -6px rgb(255 254 230 / 40%);
+  background-color: #fcecd3;
+}
+
+#destaque {
+  box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.7);
+}
+
+#destaque .product-desconto {
+  background-color: rgb(111, 14, 230, 0.7);
+}
+
+.product-card-oferta h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.product-card-oferta {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  align-items: center;
+  border-radius: 10px;
+  min-width: 200px;
+  max-width: 80vw;
+  margin-bottom: 20px;
+  position: relative;
+  margin-inline: auto;
+}
+
+.product-card-oferta .melhor-oferta {
+  margin-top: 5px;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.product-card-oferta hr {
+  width: 100%;
+  color: black;
+  margin-block: 10px;
+}
+
+.product-card-oferta .product-desconto {
+  background-color: #00000066;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: white;
+  width: 100%;
+}
+
+.product-card-oferta .percent-desconto {
+  background-color: #ffd640;
+  border-radius: 5px;
+  color: #000;
+  width: 100%;
+  padding: 3px 20px;
+  display: inline-flex;
+  margin: 15px 0px 15px 0px;
+}
+
+.product-card-oferta .product-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.product-card-oferta #oferta img {
+  width: 200px;
+  height: auto;
+  transition: all 0.4s ease-in-out;
+  transform: translateZ(50px);
+  z-index: 1000;
+}
+
+.product-card-oferta img {
+  vertical-align: middle;
+  border-style: none;
+  width: 60%;
+}
+
+.product-card-oferta .product-de {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.product-card-oferta .product-por {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: -20px;
+}
+
+.product-card-oferta .product-valor-final {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 200;
+  font-size: 2em;
+  max-height: 90px;
+}
+
+.product-card-oferta .big-number {
+  font-size: 2.5em;
+  font-weight: bold;
+  letter-spacing: -3px;
+  margin: 0px;
+}
+
+.product-card-oferta #oferta button {
+  transform: translateZ(20px);
+  transition: all 0.4s ease-in-out;
+}
+
+.product-card-oferta .por-pote {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  width: max-content;
+  width: 90px;
+  height: 90px;
+  padding: 25px 0 65px 0;
+  border-radius: 100%;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  z-index: 999999;
+  animation: float-price 1s ease-in-out infinite;
+}
+
+.btn {
+  background-color: green;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1;
+  padding: 14px 28px;
+  border-radius: 25px;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  box-shadow: 0 8px 6px -6px rgb(0 0 0 / 30%);
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+#destaque .btn {
+  background-color: #00e300;
+}
+
+#principal {
+  padding: 30px 0;
+  background: #f2a022;
+}
+
+#antes-depois {
+  background: #f2a022;
+}
+
+#resultados {
+  background: #f2a022;
+}
+
+#oferta {
+  background: #f2a022;
+}
+
+#whatsapp {
+  background: #f2a022;
+}
+
+.accordion {
+  background-color: #f2a022;
+}
+
+@keyframes float-price {
+  0% {
+    transform: scale(1) translateZ(50px) rotate(10deg) translate(10px, 10px);
+  }
+
+  50% {
+    transform: scale(1.15) translateZ(50px) rotate(10deg) translate(10px, 10px);
+  }
+
+  100% {
+    transform: scale(1) translateZ(50px) rotate(10deg) translate(10px, 10px);
+  }
+}
+
+.numero {
+  margin-top: 10px;
+  font-size: 1.6em;
+  background-color: black;
+  color: #ffffff;
+  padding: 10px 20px;
+  display: block;
+  width: max-content;
+  max-width: 200px;
+  margin-inline: auto;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .promessa .content h1 {
+    font-size: 48px;
+  }
+
+  .frasco img {
+    max-width: 380px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .promessa .content h1 {
+    font-size: 36px;
+  }
+
+  .content .faixa {
+    white-space: nowrap;
+  }
+
+  .frasco {
+    right: -25%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .promessa .content {
+    margin-top: 64px;
+  }
+
+  .promessa .content h1 {
+    font-size: 36px;
+  }
+
+  .promessa .content p {
+    font-size: 20px;
+  }
+
+  .palmeira img {
+    max-width: 300px;
+  }
+
+  .frasco {
+    right: -25%;
+  }
+
+  .frasco img {
+    max-width: 300px;
+  }
+
+  .video-css:before {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .frasco img {
+    max-width: 220px;
+  }
+}
+
+@media only screen and (height: 907px) {
+  .promessa {
+    min-height: 110vh;
+  }
+}
