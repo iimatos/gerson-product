@@ -29,7 +29,7 @@ body {
   padding: 0;
   margin: 0;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 h2 {
@@ -68,6 +68,10 @@ img {
   color: white;
 }
 
+.btn-quero.delay {
+  display: none;
+}
+
 .promessa {
   position: relative;
   min-height: 100vh;
@@ -92,7 +96,7 @@ img {
   z-index: 5;
   text-align: center;
   margin-top: 96px;
-  padding: 0 20px;
+  padding: 20px;
 }
 
 .content .faixa {
@@ -785,7 +789,7 @@ p {
   }
 
   .promessa .content {
-    margin-top: 64px;
+    margin-top: 48px;
   }
 
   .content .faixa {
@@ -805,9 +809,15 @@ p {
   }
 }
 
+@media only screen and (max-width: 460px) and (max-height: 890px) {
+  .promessa {
+    min-height: 110vh;
+  }
+}
+
 @media only screen and (max-width: 420px) {
   .promessa .content {
-    margin-top: 64px;
+    margin-top: 36px;
   }
 
   .promessa .content h1 {
