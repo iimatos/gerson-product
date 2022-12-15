@@ -68,41 +68,6 @@ img {
   color: white;
 }
 
-.primeira-dobra {
-  background-image: url('./img/bg.png');
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 50px 10px;
-}
-
-.header--texto {
-  padding: 10px;
-}
-
-.header--texto > h1 {
-  font-size: 30px;
-  line-height: 1.2em;
-  font-weight: 400;
-  color: #000000;
-}
-
-.header--texto > p {
-  font-size: 18px;
-  color: #000000;
-  margin-block: 25px;
-  padding-bottom: 20px;
-}
-
-.header--img {
-  padding: 10px;
-  width: 90%;
-}
-
 .promessa {
   position: relative;
   min-height: 100vh;
@@ -110,7 +75,7 @@ img {
 }
 
 .promessa .background {
-  background: url(./bg.png) no-repeat;
+  background: url(./img/bg.png) no-repeat;
   position: absolute;
   left: 0;
   top: 0;
