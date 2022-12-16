@@ -6,13 +6,13 @@ export default function countdown() {
 
     const counter = setInterval(() => {
       unidade.dataset.units -= Math.round(Math.random() * 4);
-      if (unidade.dataset.units < 0) {
-        unidade.innerText = 0;
+      if (unidade.dataset.units < 16) {
+        unidade.innerText = Math.round(Math.random() * (16 - 12) + 12);
         clearInterval(counter);
       } else {
         unidade.innerText = unidade.dataset.units;
       }
-    }, 3000);
+    }, 1800);
   }
 
   function handleEntry(e) {
