@@ -809,12 +809,30 @@ p {
   }
 }
 
-@media only screen and (max-device-width: 960px) and (orientation: landscape) {
+@media only screen and (min-device-width: 640px) and (max-device-width: 960px) and (orientation: landscape) {
   .promessa {
     min-height: 1024px;
   }
   .video-css {
-    max-width: 640px;
+    max-width: 620px;
+  }
+}
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 639px) and (orientation: landscape) {
+  .promessa {
+    min-height: 1024px;
+  }
+  .video-css {
+    max-width: 460px;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 460px) and (orientation: landscape) {
+  .promessa {
+    min-height: 1024px;
+  }
+  .video-css {
+    max-width: 360px;
   }
 }
 
